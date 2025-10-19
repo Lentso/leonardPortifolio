@@ -1,0 +1,185 @@
+/* ===== Service Modal Improvements ===== */
+.service-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for better contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px); /* Soft blur effect */
+}
+
+.service-modal {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 700px; /* Wider for better text flow */
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+/* Modal Content Styling */
+.modal-content {
+  color: #333; /* Dark gray for better readability */
+  line-height: 2.0; /* More space between lines */
+}
+
+.modal-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--main-color); /* Use your theme color */
+}
+
+.modal-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Technology Tags */
+.technologies {
+  margin-top: 1.8rem;
+}
+
+.technologies h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+
+.technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.technologies li {
+  background: #f0f4ff; /* Light blue background */
+  color: var(--main-color); /* Theme color text */
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 255, 0.1);
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #e40707;
+  z-index: 1001; /* Ensure it's above modal content */
+  opacity: 1 !important; /* Force visibility */
+  pointer-events: auto !important; /* Ensure clickability */
+}
+
+.modal-close:hover {
+  color: #1806bb;
+  transform: scale(1.1);
+}
+
+/* Service Icon in Modal */
+.modal-content i {
+  font-size: 3rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+/* Scrollbar Styling (for modal content) */
+.service-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.service-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.service-modal::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.service-modal::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-modal {
+  animation: modalFadeIn 0.3s ease-out;
+}
+/* ===== Larger Service Buttons ===== */
+.service-box .btn {
+  padding: 12px 28px;         /* Bigger padding (vertical, horizontal) */
+  font-size: 1.1rem;          /* Larger text */
+  font-weight: 600;           /* Bold text */
+  border-radius: 8px;         /* Rounded corners */
+  background: rgba(99, 3, 99, 0.788); /* Your theme color */
+  color: white;               /* Text color */
+  border: none;               /* Remove default border */
+  cursor: pointer;
+  transition: all 0.3s ease;  /* Smooth hover effect */
+  display: inline-block;      /* Ensure padding works correctly */
+  text-decoration: none;     /* Remove underline if using <a> */
+  margin-top: 15px;          /* Space above button */
+}
+
+/* Hover Effect */
+.service-box .btn:hover {
+  background: #3a0ca3;       /* Darker shade of main color */
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Active/Click Effect */
+.service-box .btn:active {
+  transform: translateY(1px); /* Pressed-down effect */
+}
+.service-box .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-box .btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+}
+
+.service-box .btn:hover::after {
+  left: 100%;
+}
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}

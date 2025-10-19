@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/leo-portifolio/static/css/main.64b96af5.css",
+    "main.js": "/leo-portifolio/static/js/main.13a670dd.js",
+    "index.html": "/leo-portifolio/index.html",
+    "main.64b96af5.css.map": "/leo-portifolio/static/css/main.64b96af5.css.map",
+    "main.13a670dd.js.map": "/leo-portifolio/static/js/main.13a670dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64b96af5.css",
+    "static/js/main.13a670dd.js"
+  ]
+}

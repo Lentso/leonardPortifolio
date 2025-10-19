@@ -1,0 +1,133 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.navbar.scrolled {
+    background: var(--bg-color);
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar .logo span {
+    color: var(--main-color);
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 3.5rem;
+}
+
+.navbar nav ul li a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    color: var(--main-color);
+}
+
+.navbar nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.2rem;
+    background: var(--main-color);
+    bottom: -0.5rem;
+    left: 0;
+    transition: 0.3s;
+}
+
+.navbar nav ul li a:hover::after,
+.navbar nav ul li a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar nav {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--bg-color);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        transition: 0.25s ease;
+        transition-delay: 0.25s;
+    }
+
+    .navbar nav.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar nav ul {
+        display: block;
+    }
+
+    .navbar nav ul li {
+        margin: 2rem 0;
+    }
+
+    .navbar nav ul li a {
+        display: block;
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo-gradient {
+    background: linear-gradient(135deg, #00ABF0, #081B29);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.logo-text {
+    color: #00ABF0;
+}

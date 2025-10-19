@@ -1,0 +1,41 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+}
+
+.contact-item i {
+    font-size: 22px;
+    color: #f1c40f;
+}
+
+.contact-type {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-value {
+    font-style: italic;
+}
